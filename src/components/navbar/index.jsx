@@ -1,10 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import { Container, Navbar, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import "./styles.css";
-export default class NavBar extends Component {
-  render() {
+ const NavBar =()=>  {
     return (
       <Navbar expand="lg" className="blog-navbar" fixed="top">
         <Container className="justify-content-between">
@@ -30,8 +29,16 @@ export default class NavBar extends Component {
             </svg>
             Post Article
           </Button>
+          <div>
+          <Navbar.Brand as={Link} to="/register">
+          <Button variant="info">Sign Up</Button>
+          </Navbar.Brand>
+          <Navbar.Brand as={Link} to="/login">
+          <Button variant="info">Log In</Button>
+          </Navbar.Brand>
+          </div>
         </Container>
       </Navbar>
     );
-  }
 }
+export default NavBar
