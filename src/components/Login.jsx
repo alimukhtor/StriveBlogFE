@@ -33,6 +33,8 @@ const Login = () => {
       if (response.ok) {
         setIsRegistered(true);
         // navigate('/')
+        const authors = await response.json();
+        localStorage.setItem("MyToken", authors.accessToken);
         setRegistration({
           first_name: "",
           last_name: "",
@@ -42,7 +44,9 @@ const Login = () => {
       } else {
         console.log("Error while fetched!");
       }
-    } catch (error) {}
+    } catch (error) {
+        console.log(error)
+    }
   };
   return (
     <>
