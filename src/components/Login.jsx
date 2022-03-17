@@ -66,33 +66,39 @@ const Login = () => {
                   Sign in to <strong>StriveBlog!</strong>
                 </h1>
                 <div className="my-3 text-center">
-                <a href="http://localhost:3004/authors/googleLogin">
-                  <Button
-                    variant="light"
-                    style={{backgroundColor:"lightgrey"}}
-                    className="mt-1 rounded-pill"
-                  >
-                    <FcGoogle style={{fontSize:"20px"}} />  
-                  </Button>
-                </a>
-                <a href="http://localhost:3004/authors/facebookLogin">
-                  <Button
-                    variant="light"
-                    style={{backgroundColor:"lightgrey"}}
-                    className="mt-1 rounded-pill"
-                  >
-                    <ImFacebook2 style={{fontSize:"20px"}} className="rounded-pill mb-1"/>   
-                  </Button>
-                </a>
-                <a href="http://localhost:3004/authors/githubLogin">
-                  <Button
-                    variant="light"
-                    style={{backgroundColor:"lightgrey"}}
-                    className="mt-1 rounded-pill"
-                  >
-                    <SiGithub style={{fontSize:"20px"}} className="rounded-pill mb-1"/> 
-                  </Button>
-                </a>
+                  <a href="http://localhost:3004/authors/googleLogin">
+                    <Button
+                      variant="light"
+                      style={{ backgroundColor: "lightgrey" }}
+                      className="mt-1 rounded-pill"
+                    >
+                      <FcGoogle style={{ fontSize: "20px" }} />
+                    </Button>
+                  </a>
+                  <a href="http://localhost:3004/authors/facebookLogin">
+                    <Button
+                      variant="light"
+                      style={{ backgroundColor: "lightgrey" }}
+                      className="mt-1 rounded-pill"
+                    >
+                      <ImFacebook2
+                        style={{ fontSize: "20px" }}
+                        className="rounded-pill mb-1"
+                      />
+                    </Button>
+                  </a>
+                  <a href="http://localhost:3004/authors/githubLogin">
+                    <Button
+                      variant="light"
+                      style={{ backgroundColor: "lightgrey" }}
+                      className="mt-1 rounded-pill"
+                    >
+                      <SiGithub
+                        style={{ fontSize: "20px" }}
+                        className="rounded-pill mb-1"
+                      />
+                    </Button>
+                  </a>
                 </div>
                 <p className="text-center text-muted">or do via email</p>
                 <Form.Group>
@@ -125,7 +131,7 @@ const Login = () => {
                   style={{ width: "100%" }}
                   className="mt-3 rounded-pill"
                 >
-                  Submit
+                  Log in
                 </Button>
               </Form>
             </div>

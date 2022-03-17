@@ -46,13 +46,13 @@ const Register = () => {
   };
   return (
     <>
-        <Row className="d-flex justify-content-center">
-          <Col md={6}>
-      {
-            isRegistered ? 
-            <Alert variant="success" className='rounded-pill text-center'>
+      <Row className="d-flex justify-content-center">
+        <Col md={6}>
+          {isRegistered ? (
+            <Alert variant="success" className="rounded-pill text-center">
               <FiCheckCircle /> Succesfully registered!
-            </Alert>:
+            </Alert>
+          ) : (
             <div className="register-form">
               <Form onSubmit={handleSubmit}>
                 <h1>
@@ -112,13 +112,13 @@ const Register = () => {
                   style={{ width: "100%" }}
                   className="mt-3 rounded-pill"
                 >
-                  Submit
+                  Sign Up
                 </Button>
               </Form>
             </div>
-      }
-      </Col>
-    </Row>
+          )}
+        </Col>
+      </Row>
     </>
   );
 };
