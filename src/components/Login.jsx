@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Form, Button, Alert, Row, Col } from "react-bootstrap";
 import { FiCheckCircle } from "react-icons/fi";
+import { FcGoogle } from "react-icons/fc";
+import { SiGithub } from "react-icons/si";
+import { ImFacebook2 } from "react-icons/im";
 // import {useNavigate} from 'react-router-dom'
 import "./register.css";
 const Login = () => {
@@ -45,23 +48,53 @@ const Login = () => {
         console.log("Error while fetched!");
       }
     } catch (error) {
-        console.log(error)
+      console.log(error);
     }
   };
   return (
     <>
-        <Row className="d-flex justify-content-center">
-          <Col md={6}>
-      {
-            isRegistered ? 
-            <Alert variant="success" className='rounded-pill text-center'>
+      <Row className="d-flex justify-content-center">
+        <Col md={6}>
+          {isRegistered ? (
+            <Alert variant="success" className="rounded-pill text-center">
               <FiCheckCircle /> Succesfully Logged in!
-            </Alert>:
+            </Alert>
+          ) : (
             <div className="register-form">
               <Form onSubmit={handleSubmit}>
                 <h1 className="text-center">
-                  <strong>Log in!</strong>
+                  Sign in to <strong>StriveBlog!</strong>
                 </h1>
+                <div className="my-3 text-center">
+                <a href="http://localhost:3004/authors/googleLogin">
+                  <Button
+                    variant="light"
+                    style={{backgroundColor:"lightgrey"}}
+                    className="mt-1 rounded-pill"
+                  >
+                    <FcGoogle style={{fontSize:"20px"}} />  
+                  </Button>
+                </a>
+                <a href="http://localhost:3004/authors/googleLogin">
+                  <Button
+                    variant="light"
+                    style={{backgroundColor:"lightgrey"}}
+                    className="mt-1 rounded-pill"
+                  >
+                    <ImFacebook2 style={{fontSize:"20px"}} className="rounded-pill mb-1"/>   
+                  </Button>
+                </a>
+                <a href="http://localhost:3004/authors/githubLogin">
+                  <Button
+                    variant="light"
+                    style={{backgroundColor:"lightgrey"}}
+                    className="mt-1 rounded-pill"
+                  >
+                    <SiGithub style={{fontSize:"20px"}} className="rounded-pill mb-1"/> 
+                  </Button>
+                </a>
+                </div>
+                <p className="text-center text-muted">or do via email</p>
                 <Form.Group>
                   <Form.Label>Email address</Form.Label>
                   <Form.Control
@@ -96,9 +129,9 @@ const Login = () => {
                 </Button>
               </Form>
             </div>
-      }
-      </Col>
-    </Row>
+          )}
+        </Col>
+      </Row>
     </>
   );
 };
