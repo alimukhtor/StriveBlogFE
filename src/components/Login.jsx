@@ -75,7 +75,7 @@ const Login = () => {
                     <FcGoogle style={{fontSize:"20px"}} />  
                   </Button>
                 </a>
-                <a href="http://localhost:3004/authors/googleLogin">
+                <a href="http://localhost:3004/authors/facebookLogin">
                   <Button
                     variant="light"
                     style={{backgroundColor:"lightgrey"}}
